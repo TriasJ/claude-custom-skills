@@ -1,0 +1,23 @@
+# Sensitive data
+data/
+.env
+*.env
+
+# Virtual environments
+.venv/
+venv/
+node_modules/
+
+# Browser state
+browser_state/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude local settings (contains permissions)
+.claude/
