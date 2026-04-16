@@ -1,0 +1,686 @@
+/**
+ * Quantum Dark Theme for reveal.js
+ * A modern, tech-focused dark theme with teal and blue accents
+ * Optimized for widescreen (16:9) presentations
+ */
+
+/* ==========================================================================
+   CSS Variables - Customize these for easy theme modifications
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --background-color: #0a0a0a;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --teal-accent: #00FFF5;
+  --blue-accent: #0080FF;
+  --purple-accent: #B026FF;
+  --success-color: #00FF41;
+  --warning-color: #FFD700;
+
+  /* Typography */
+  --heading-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --body-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --code-font: 'Fira Code', 'Monaco', 'Courier New', monospace;
+
+  /* Spacing */
+  --slide-padding: 60px;
+  --content-max-width: 1100px;
+
+  /* Effects */
+  --glow-intensity: 0 0 20px;
+  --transition-speed: 0.3s;
+  --border-radius: 8px;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+.reveal {
+  font-family: var(--body-font);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 40px 60px;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure content doesn't overflow */
+.reveal .slides section > * {
+  max-width: 100%;
+}
+
+/* Scrollbar styling for overflow */
+.reveal .slides section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.reveal .slides section::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.reveal .slides section::-webkit-scrollbar-thumb {
+  background: var(--teal-accent);
+  border-radius: 4px;
+}
+
+.reveal .slides section::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-accent);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: var(--heading-color);
+  text-align: left;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.reveal h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.reveal h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+
+.reveal h2 i {
+  color: var(--teal-accent);
+  margin-right: 0.3em;
+  font-size: 0.9em;
+}
+
+.reveal h3 {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.reveal p {
+  margin: 0 0 1em 0;
+  line-height: 1.6;
+}
+
+/* Subtitle styling */
+.reveal .subtitle {
+  font-size: 1.2em;
+  color: var(--teal-accent);
+  font-weight: 300;
+  margin-top: 0.5em;
+}
+
+.reveal .author {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 2em;
+}
+
+.reveal .note {
+  font-size: 0.7em;
+  color: #666;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Text Effects
+   ========================================================================== */
+
+.glow-text {
+  text-shadow: var(--glow-intensity) var(--teal-accent);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { text-shadow: 0 0 20px var(--teal-accent); }
+  50% { text-shadow: 0 0 40px var(--teal-accent), 0 0 60px var(--teal-accent); }
+}
+
+.teal-text {
+  color: var(--teal-accent);
+}
+
+.blue-text {
+  color: var(--blue-accent);
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+.reveal ul,
+.reveal ol {
+  margin: 0 0 1em 1.5em;
+}
+
+.reveal ul {
+  list-style-type: none;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+.reveal ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--teal-accent);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Agenda List */
+.agenda-list {
+  font-size: 1.1em;
+  margin-left: 0;
+}
+
+.agenda-list li {
+  padding: 0.8em 0;
+  padding-left: 3em;
+  border-bottom: 1px solid #222;
+  position: relative;
+}
+
+.agenda-list li::before {
+  display: none;
+}
+
+.agenda-list .bullet-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2em;
+  height: 2em;
+  background: linear-gradient(135deg, var(--teal-accent), var(--blue-accent));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #000;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+.reveal a {
+  color: var(--teal-accent);
+  text-decoration: none;
+  transition: all var(--transition-speed);
+}
+
+.reveal a:hover {
+  color: var(--blue-accent);
+  text-shadow: 0 0 10px var(--blue-accent);
+}
+
+/* ==========================================================================
+   Backgrounds
+   ========================================================================== */
+
+.tech-grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 245, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 245, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ==========================================================================
+   Two Column Layout
+   ========================================================================== */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+  margin-top: 2em;
+}
+
+.two-column .column h3 {
+  margin-bottom: 0.8em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--teal-accent);
+}
+
+/* ==========================================================================
+   Code Blocks
+   ========================================================================== */
+
+.reveal pre {
+  margin: 1em 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.reveal code {
+  font-family: var(--code-font);
+  font-size: 0.75em;
+  line-height: 1.5;
+  padding: 0.2em 0.4em;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+}
+
+.reveal pre code {
+  max-height: 500px;
+  padding: 1.5em;
+  border-radius: var(--border-radius);
+  display: block;
+}
+
+/* Line numbers highlighting */
+.reveal pre code[data-line-numbers] {
+  counter-reset: line-number;
+}
+
+/* ==========================================================================
+   Statistics Grid
+   ========================================================================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, rgba(0, 255, 245, 0.1), rgba(0, 128, 255, 0.1));
+  border: 2px solid rgba(0, 255, 245, 0.3);
+  border-radius: var(--border-radius);
+  padding: 2em 1em;
+  text-align: center;
+  transition: all var(--transition-speed);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--teal-accent);
+  box-shadow: 0 10px 30px rgba(0, 255, 245, 0.3);
+}
+
+.stat-icon {
+  font-size: 2.5em;
+  color: var(--teal-accent);
+  margin-bottom: 0.3em;
+}
+
+.stat-number {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--heading-color);
+  line-height: 1;
+  margin-bottom: 0.2em;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   Quote Styling
+   ========================================================================== */
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.big-quote {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--heading-color);
+  max-width: 900px;
+  margin: 0;
+  padding: 0 2em;
+  position: relative;
+}
+
+.big-quote::before {
+  content: '"';
+  font-size: 3em;
+  color: var(--teal-accent);
+  position: absolute;
+  left: -0.3em;
+  top: -0.2em;
+}
+
+.quote-container cite {
+  display: block;
+  margin-top: 1.5em;
+  font-size: 1.2em;
+  color: var(--teal-accent);
+  font-style: normal;
+}
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+
+.image-container {
+  margin: 1.5em 0;
+  text-align: center;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.bordered-image {
+  max-width: 100%;
+  max-height: 450px;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  border: 2px solid rgba(0, 255, 245, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* General image constraint for all images */
+.reveal img {
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.image-caption {
+  margin-top: 0.8em;
+  font-size: 0.8em;
+  color: #888;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Process Flow
+   ========================================================================== */
+
+.process-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2em;
+  gap: 1em;
+}
+
+.process-step {
+  flex: 1;
+  text-align: center;
+  padding: 1.5em 1em;
+  background: linear-gradient(135deg, rgba(0, 255, 245, 0.05), rgba(0, 128, 255, 0.05));
+  border: 2px solid rgba(0, 255, 245, 0.2);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+}
+
+.process-step:hover {
+  transform: scale(1.05);
+  border-color: var(--teal-accent);
+}
+
+.step-number {
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 auto 0.5em;
+  background: linear-gradient(135deg, var(--teal-accent), var(--blue-accent));
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.process-step h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+  color: var(--heading-color);
+}
+
+.process-step p {
+  font-size: 0.8em;
+  color: #888;
+  margin: 0;
+}
+
+.process-arrow {
+  font-size: 2em;
+  color: var(--teal-accent);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Video Background Overlay
+   ========================================================================== */
+
+.overlay-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2em;
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(10px);
+}
+
+/* ==========================================================================
+   Call to Action
+   ========================================================================== */
+
+.cta-container {
+  text-align: center;
+  padding: 3em 0;
+}
+
+.button-group {
+  margin-top: 2em;
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+}
+
+.cta-button {
+  padding: 0.8em 2em;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  font-family: var(--body-font);
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, var(--teal-accent), var(--blue-accent));
+  color: #000;
+  box-shadow: 0 4px 15px rgba(0, 255, 245, 0.3);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 255, 245, 0.5);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--teal-accent);
+  border: 2px solid var(--teal-accent);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(0, 255, 245, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Contact Info
+   ========================================================================== */
+
+.contact-info {
+  margin-top: 2em;
+  font-size: 0.9em;
+}
+
+.contact-info p {
+  margin: 0.5em 0;
+  color: #888;
+}
+
+.contact-info i {
+  color: var(--teal-accent);
+  margin-right: 0.5em;
+  width: 1.2em;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Fragments
+   ========================================================================== */
+
+.reveal .fragment.visible {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Controls & Progress Bar
+   ========================================================================== */
+
+.reveal .controls {
+  color: var(--teal-accent);
+}
+
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--teal-accent);
+}
+
+.reveal .progress span {
+  background: linear-gradient(90deg, var(--teal-accent), var(--blue-accent));
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .reveal {
+    font-size: 24px;
+  }
+
+  .reveal h1 {
+    font-size: 2em;
+  }
+
+  .reveal h2 {
+    font-size: 1.6em;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  .process-flow {
+    flex-direction: column;
+  }
+
+  .process-arrow {
+    transform: rotate(90deg);
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 2em auto 0;
+  }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  .reveal .tech-grid-background {
+    display: none;
+  }
+
+  .reveal {
+    background: white;
+    color: black;
+  }
+
+  .reveal h1, .reveal h2, .reveal h3 {
+    color: black;
+  }
+}

@@ -1,0 +1,301 @@
+/* Research Seminar Theme */
+/* Dark, sophisticated design for academic research presentations */
+
+@import 'default';
+
+:root {
+  --color-primary: #E8E8E8;
+  --color-secondary: #64B5F6;
+  --color-accent: #FFB74D;
+  --color-text: #E0E0E0;
+  --color-background: #1E1E1E;
+  --color-code-bg: #2D2D2D;
+}
+
+section {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 24px;
+  padding: 60px 80px;
+}
+
+h1 {
+  color: var(--color-secondary);
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  border-bottom: 4px solid var(--color-accent);
+  padding-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+h2 {
+  color: var(--color-secondary);
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 45px;
+  margin-bottom: 25px;
+}
+
+h3 {
+  color: var(--color-accent);
+  font-size: 32px;
+  font-weight: 500;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #FFC947;
+}
+
+strong {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+em {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+code {
+  background-color: var(--color-code-bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 20px;
+  color: #4FC3F7;
+  border: 1px solid #404040;
+}
+
+pre {
+  background-color: var(--color-code-bg);
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 5px solid var(--color-accent);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+blockquote {
+  background-color: #2A2A2A;
+  border-left: 6px solid var(--color-secondary);
+  padding: 20px 25px;
+  margin: 25px 0;
+  font-style: italic;
+  color: #B0B0B0;
+  border-radius: 5px;
+}
+
+ul, ol {
+  margin-left: 40px;
+  line-height: 2.0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 30px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+th {
+  background: linear-gradient(135deg, #2C5364 0%, #203A43 100%);
+  color: var(--color-primary);
+  padding: 18px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 22px;
+  border-bottom: 3px solid var(--color-accent);
+}
+
+td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #404040;
+  background-color: #252525;
+}
+
+tr:nth-child(even) td {
+  background-color: #2A2A2A;
+}
+
+tr:hover td {
+  background-color: #303030;
+}
+
+/* Title slide */
+section.lead {
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+  color: var(--color-primary);
+}
+
+section.lead h1 {
+  color: var(--color-primary);
+  border-bottom: none;
+  font-size: 68px;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+  letter-spacing: 2px;
+}
+
+section.lead p {
+  font-size: 32px;
+  margin-top: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  color: var(--color-secondary);
+}
+
+/* Research question box */
+.research-question {
+  background: linear-gradient(135deg, #1A237E 0%, #283593 100%);
+  border: 3px solid var(--color-secondary);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 25px 0;
+  box-shadow: 0 4px 20px rgba(100, 181, 246, 0.3);
+}
+
+.research-question h3 {
+  margin-top: 0;
+  color: var(--color-secondary);
+  font-size: 28px;
+}
+
+/* Methodology box */
+.methodology {
+  background-color: #2A2A2A;
+  border: 3px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 25px 0;
+}
+
+.methodology h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+/* Header and footer */
+header {
+  color: var(--color-secondary);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+footer {
+  color: #808080;
+  font-size: 18px;
+}
+
+/* Image captions */
+section img + em,
+section img + div {
+  display: block;
+  text-align: center;
+  font-size: 19px;
+  color: #A0A0A0;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+/* Two-column layout */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.columns > div {
+  padding: 20px;
+  background-color: #252525;
+  border-radius: 8px;
+}
+
+/* Explanatory slide style */
+section.explanatory {
+  background: linear-gradient(to right, #1E1E1E 0%, #2A2A2A 100%);
+  border-left: 12px solid var(--color-accent);
+  padding-left: 75px;
+}
+
+section.explanatory h2 {
+  color: var(--color-accent);
+}
+
+section.explanatory p {
+  line-height: 1.9;
+  text-align: justify;
+  color: #D0D0D0;
+}
+
+/* Citation style */
+.citation {
+  font-size: 17px;
+  color: #808080;
+  margin-top: 50px;
+  border-top: 2px solid #404040;
+  padding-top: 25px;
+}
+
+sup {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Mermaid diagram container */
+.mermaid {
+  background-color: #252525;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  border: 2px solid #404040;
+}
+
+/* Page number */
+section::after {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Findings highlight */
+.findings {
+  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+  border: 3px solid #66BB6A;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  box-shadow: 0 4px 20px rgba(102, 187, 106, 0.3);
+}
+
+.findings::before {
+  content: "🔬 Key Findings";
+  display: block;
+  font-weight: 700;
+  color: #81C784;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+/* Statistics emphasis */
+.stats {
+  font-family: 'Fira Code', monospace;
+  font-size: 28px;
+  color: var(--color-accent);
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+  background-color: #2A2A2A;
+  border-radius: 8px;
+  margin: 20px 0;
+}

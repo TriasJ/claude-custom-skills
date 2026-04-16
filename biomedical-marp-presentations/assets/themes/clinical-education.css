@@ -1,0 +1,277 @@
+/* Clinical Education Theme */
+/* Calming blues and greens for medical training contexts */
+
+@import 'default';
+
+:root {
+  --color-primary: #1E5A8E;
+  --color-secondary: #3B8EA5;
+  --color-accent: #27AE60;
+  --color-text: #2C3E50;
+  --color-background: #F0F4F7;
+  --color-code-bg: #E8EEF2;
+}
+
+section {
+  font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 24px;
+  padding: 60px 80px;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  border-bottom: 5px solid var(--color-secondary);
+  padding-bottom: 15px;
+}
+
+h2 {
+  color: var(--color-primary);
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: var(--color-secondary);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+em {
+  color: var(--color-secondary);
+  font-style: italic;
+}
+
+code {
+  background-color: var(--color-code-bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+pre {
+  background-color: var(--color-code-bg);
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 6px solid var(--color-accent);
+}
+
+blockquote {
+  background-color: #E8F4F8;
+  border-left: 6px solid var(--color-secondary);
+  padding: 20px 25px;
+  margin: 25px 0;
+  font-style: italic;
+  color: #2C3E50;
+  border-radius: 5px;
+}
+
+ul, ol {
+  margin-left: 35px;
+  line-height: 1.9;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 25px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+th {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #C8D6E0;
+  background-color: white;
+}
+
+tr:nth-child(even) td {
+  background-color: #F8FBFD;
+}
+
+tr:hover td {
+  background-color: #E8F4F8;
+}
+
+/* Title slide */
+section.lead {
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
+  color: white;
+}
+
+section.lead h1 {
+  color: white;
+  border-bottom: none;
+  font-size: 64px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+section.lead p {
+  font-size: 30px;
+  margin-top: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Learning objectives box */
+.objectives {
+  background-color: #E8F4F8;
+  border: 3px solid var(--color-secondary);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.objectives h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+/* Clinical pearl box */
+.pearl {
+  background-color: #E8F8E8;
+  border: 3px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.pearl::before {
+  content: "💡 Clinical Pearl";
+  display: block;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+}
+
+/* Header and footer */
+header {
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+footer {
+  color: #5A7A8E;
+  font-size: 18px;
+}
+
+/* Image captions */
+section img + em,
+section img + div {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #5A7A8E;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Two-column layout */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.columns > div {
+  padding: 15px;
+}
+
+/* Explanatory slide style */
+section.explanatory {
+  background-color: white;
+  border-left: 10px solid var(--color-accent);
+  padding-left: 70px;
+}
+
+section.explanatory h2 {
+  color: var(--color-accent);
+}
+
+section.explanatory p {
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Citation style */
+.citation {
+  font-size: 17px;
+  color: #5A7A8E;
+  margin-top: 45px;
+  border-top: 2px solid #C8D6E0;
+  padding-top: 20px;
+}
+
+sup {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* Mermaid diagram container */
+.mermaid {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Page number */
+section::after {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Key takeaway box */
+.takeaway {
+  background-color: #FFF9E6;
+  border: 3px solid #F39C12;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  font-size: 22px;
+}
+
+.takeaway::before {
+  content: "🎯 Key Takeaway";
+  display: block;
+  font-weight: 700;
+  color: #E67E22;
+  margin-bottom: 10px;
+}

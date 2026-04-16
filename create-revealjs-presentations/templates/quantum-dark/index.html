@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Dark - reveal.js Template</title>
+
+  <!-- reveal.js Core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/monokai.css">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+
+  <!-- Custom Theme -->
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide -->
+      <section data-background-color="#0a0a0a">
+        <div class="tech-grid-background"></div>
+        <h1 class="glow-text">Quantum Dark</h1>
+        <p class="subtitle">A Modern Tech Presentation Template</p>
+        <p class="author"><i class="fas fa-user-circle"></i> Your Name</p>
+        <aside class="notes">
+          Welcome to the Quantum Dark template showcase.
+          This template is designed for tech-focused presentations with a modern, dark aesthetic.
+        </aside>
+      </section>
+
+      <!-- Agenda Slide -->
+      <section data-background-color="#0a0a0a">
+        <h2><i class="fas fa-list-check"></i> Agenda</h2>
+        <ul class="agenda-list">
+          <li class="fragment"><span class="bullet-icon">01</span> Introduction to Quantum Dark</li>
+          <li class="fragment"><span class="bullet-icon">02</span> Key Features</li>
+          <li class="fragment"><span class="bullet-icon">03</span> Design Elements</li>
+          <li class="fragment"><span class="bullet-icon">04</span> Code Examples</li>
+          <li class="fragment"><span class="bullet-icon">05</span> Data Visualization</li>
+        </ul>
+        <aside class="notes">
+          Today we'll explore the five main sections of this template.
+          Each section demonstrates different features of the Quantum Dark theme.
+        </aside>
+      </section>
+
+      <!-- Two Column Layout -->
+      <section data-background-color="#0a0a0a">
+        <h2><i class="fas fa-columns"></i> Two Column Layout</h2>
+        <div class="two-column">
+          <div class="column">
+            <h3 class="teal-text">Left Column</h3>
+            <ul>
+              <li>Perfect for comparisons</li>
+              <li>Side-by-side content</li>
+              <li>Text and images</li>
+              <li>Balanced layouts</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3 class="blue-text">Right Column</h3>
+            <ul>
+              <li>Responsive design</li>
+              <li>Flexible spacing</li>
+              <li>Clean alignment</li>
+              <li>Professional look</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="notes">
+          Two-column layouts are great for presenting contrasting ideas,
+          before/after scenarios, or feature comparisons.
+        </aside>
+      </section>
+
+      <!-- Code Highlighting -->
+      <section data-background-color="#0a0a0a">
+        <h2><i class="fas fa-code"></i> Syntax Highlighting</h2>
+        <pre><code class="language-javascript" data-trim data-line-numbers="1-2|4-6|8-10">
+// Initialize reveal.js with Quantum Dark theme
+Reveal.initialize({
+  width: 1280,
+  height: 720,
+  center: true,
+  hash: true,
+
+  transition: 'slide',
+  transitionSpeed: 'default',
+  plugins: [RevealHighlight, RevealNotes]
+});
+        </code></pre>
+        <aside class="notes">
+          Code highlighting uses the Monokai theme, optimized for dark backgrounds.
+          Line numbers and highlighting make it easy to focus on specific sections.
+        </aside>
+      </section>
+
+      <!-- Tech Stats Grid -->
+      <section data-background-color="#0a0a0a">
+        <h2><i class="fas fa-chart-line"></i> Statistics Grid</h2>
+        <div class="stats-grid">
+          <div class="stat-card fragment">
+            <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Performance</div>
+          </div>
+          <div class="stat-card fragment">
+            <div class="stat-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Security</div>
+          </div>
+          <div class="stat-card fragment">
+            <div class="stat-icon"><i class="fas fa-users"></i></div>
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Users</div>
+          </div>
+          <div class="stat-card fragment">
+            <div class="stat-icon"><i class="fas fa-star"></i></div>
+            <div class="stat-number">4.9</div>
+            <div class="stat-label">Rating</div>
+          </div>
+        </div>
+        <aside class="notes">
+          Statistics grids are perfect for presenting key metrics and achievements.
+          The cards animate in sequence for visual impact.
+        </aside>
+      </section>
+
+      <!-- Quote Slide -->
+      <section data-background-color="#0a0a0a">
+        <div class="quote-container">
+          <blockquote class="big-quote">
+            "The future belongs to those who prepare for it today."
+          </blockquote>
+          <cite>— Malcolm X</cite>
+        </div>
+        <aside class="notes">
+          Quote slides provide powerful moments in presentations.
+          Use them to emphasize key messages or philosophical points.
+        </aside>
+      </section>
+
+      <!-- Image with Overlay -->
+      <section data-background-color="#0a0a0a">
+        <h2><i class="fas fa-image"></i> Image Example</h2>
+        <p class="note">Replace with your own images via fetch-media skill</p>
+        <div class="image-container">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&fit=crop"
+               alt="Technology Background"
+               class="bordered-image">
+          <div class="image-caption">High-resolution tech imagery works best</div>
+        </div>
+        <aside class="notes">
+          Images: Technology Background from Unsplash (free to use)
+          The skill will automatically fetch relevant images using fetch-media.
+        </aside>
+      </section>
+
+      <!-- Process Flow -->
+      <section data-background-color="#0a0a0a">
+        <h2><i class="fas fa-diagram-project"></i> Process Flow</h2>
+        <div class="process-flow">
+          <div class="process-step fragment">
+            <div class="step-number">1</div>
+            <h3>Research</h3>
+            <p>Gather requirements</p>
+          </div>
+          <div class="process-arrow fragment">→</div>
+          <div class="process-step fragment">
+            <div class="step-number">2</div>
+            <h3>Design</h3>
+            <p>Create mockups</p>
+          </div>
+          <div class="process-arrow fragment">→</div>
+          <div class="process-step fragment">
+            <div class="step-number">3</div>
+            <h3>Develop</h3>
+            <p>Build features</p>
+          </div>
+          <div class="process-arrow fragment">→</div>
+          <div class="process-step fragment">
+            <div class="step-number">4</div>
+            <h3>Launch</h3>
+            <p>Deploy product</p>
+          </div>
+        </div>
+        <aside class="notes">
+          Process flows show sequential steps clearly.
+          Each step animates in with arrow connectors.
+        </aside>
+      </section>
+
+      <!-- Video Background Example -->
+      <section data-background-video="https://cdn.jsdelivr.net/gh/hakimel/reveal.js@master/test/assets/bg.mp4"
+               data-background-video-loop
+               data-background-video-muted>
+        <div class="overlay-content">
+          <h2 class="shadow-text">Video Backgrounds</h2>
+          <p class="shadow-text">Support for looping video backgrounds</p>
+        </div>
+        <aside class="notes">
+          Video backgrounds add dynamic motion to slides.
+          Use sparingly for maximum impact.
+        </aside>
+      </section>
+
+      <!-- Call to Action -->
+      <section data-background-color="#0a0a0a">
+        <div class="cta-container">
+          <h2 class="glow-text">Ready to Create?</h2>
+          <p class="subtitle">Use this template for your next tech presentation</p>
+          <div class="button-group">
+            <button class="cta-button primary">Get Started</button>
+            <button class="cta-button secondary">Learn More</button>
+          </div>
+        </div>
+        <aside class="notes">
+          End with a clear call to action.
+          This slide template works well for conclusions and next steps.
+        </aside>
+      </section>
+
+      <!-- Thank You Slide -->
+      <section data-background-color="#0a0a0a">
+        <div class="tech-grid-background"></div>
+        <h1 class="glow-text">Thank You</h1>
+        <p class="subtitle">Questions?</p>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> email@example.com</p>
+          <p><i class="fas fa-globe"></i> yourwebsite.com</p>
+          <p><i class="fab fa-github"></i> @yourusername</p>
+        </div>
+        <aside class="notes">
+          Thank the audience and provide contact information.
+          Leave time for questions and discussion.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js Core Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/highlight/highlight.js"></script>
+
+  <!-- Custom Configuration -->
+  <script src="config.js"></script>
+</body>
+</html>

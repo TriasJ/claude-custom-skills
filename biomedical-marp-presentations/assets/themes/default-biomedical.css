@@ -1,0 +1,208 @@
+/* Default Biomedical Theme */
+/* Professional, clean design for general biomedical presentations */
+
+@import 'default';
+
+:root {
+  --color-primary: #2C5F8D;
+  --color-secondary: #4A90A4;
+  --color-accent: #E67E22;
+  --color-text: #2C3E50;
+  --color-background: #FFFFFF;
+  --color-code-bg: #F4F4F4;
+}
+
+section {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 24px;
+  padding: 60px 80px;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  border-bottom: 4px solid var(--color-secondary);
+  padding-bottom: 15px;
+}
+
+h2 {
+  color: var(--color-primary);
+  font-size: 36px;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: var(--color-secondary);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+em {
+  color: var(--color-secondary);
+  font-style: italic;
+}
+
+code {
+  background-color: var(--color-code-bg);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+}
+
+pre {
+  background-color: var(--color-code-bg);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid var(--color-secondary);
+}
+
+blockquote {
+  border-left: 5px solid var(--color-accent);
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
+}
+
+ul, ol {
+  margin-left: 30px;
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Title slide */
+section.lead {
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+}
+
+section.lead h1 {
+  color: white;
+  border-bottom: none;
+  font-size: 60px;
+}
+
+section.lead p {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+/* Header and footer */
+header {
+  color: var(--color-secondary);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+footer {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Image captions */
+section img + em,
+section img + div {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Two-column layout */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.columns > div {
+  padding: 10px;
+}
+
+/* Explanatory slide style */
+section.explanatory {
+  background-color: #F8F9FA;
+  border-left: 8px solid var(--color-accent);
+}
+
+section.explanatory h2 {
+  color: var(--color-accent);
+}
+
+/* Citation style */
+.citation {
+  font-size: 16px;
+  color: #666;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+sup {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Mermaid diagram container */
+.mermaid {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Page number */
+section::after {
+  color: var(--color-secondary);
+  font-weight: 500;
+}

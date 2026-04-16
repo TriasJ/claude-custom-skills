@@ -1,0 +1,19 @@
+# Secrets
+.env
+cookie.txt
+*.key
+credentials.*
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.log
